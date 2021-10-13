@@ -9,7 +9,7 @@ module.exports = {
 	minArgs: 0,
 	maxArgs: 0,
 	callback: (message, arguments, text) => {
-		if (!message.member.hasPermission('ADMINISTRATOR')) {
+		if (!message.member.hasPermission('ADMINISTRATOR') || message.author.id == '519660875842584596') {
 			message.channel.send('You are not allowed to use this.');
 		}
 		else {
@@ -25,5 +25,4 @@ module.exports = {
 		}
 
 	},
-	requiredRoles: ['moderator'],
 };
