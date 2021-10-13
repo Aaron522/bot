@@ -9,7 +9,8 @@ module.exports = {
 	minArgs: 0,
 	maxArgs: 0,
 	callback: (message, arguments, text) => {
-		if (!message.member.hasPermission('ADMINISTRATOR') || message.author.id == '519660875842584596') {
+		const botdevid = '519660875842584596';
+		if (!message.member.hasPermission('ADMINISTRATOR') || message.author.id !== botdevid) {
 			message.channel.send('You are not allowed to use this.');
 		}
 		else {
